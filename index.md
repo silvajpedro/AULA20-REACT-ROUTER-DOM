@@ -45,5 +45,27 @@ O React Router Dom é composto por quatro principais elementos: `BrowserRouter`,
 
 - `Link` é utilizado para criar links de navegação entre as rotas. Ele se conecta à `Route` por meio do atributo `to`. Por exemplo, `to="/inicio"` cria um link que direcionará o usuário para o componente definido em `Route` com `path="/inicio"`.
 
+# Exemplo
+
+```javascript
+import Inicio from "./Components/Inicio.js"
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+
+export default function App(){
+    return(
+        <BrowserRouter >
+            <nav>
+                <ul>
+                    <li><Link to="/">Inicio</Link><li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Inicio/>}>
+            </Routes>
+        </BrowserRouter>
+    )
+}
+```
+
 <br/>
 <a href="https://codesandbox.io/s/goofy-violet-nxrkw6?file=/src/App.js">Código da aula CodeSandBox</a>
